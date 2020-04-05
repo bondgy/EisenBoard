@@ -25,6 +25,6 @@ public class weeklyScheduleController {
 	 */
 	@GetMapping("/{week}")
 	public @ResponseBody List<TaskDTO> getWeeklyTasks(@PathVariable int week){
-		return repo.findAllByWeek();
+		return repo.findAllByWeek(week);
 	}
 }
